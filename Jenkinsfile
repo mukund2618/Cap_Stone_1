@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('Docker Build') 
+    stage('Docker Build') {
       steps {
          sh 'docker build -t mukund2618/cap_stone_1 .'
       }
