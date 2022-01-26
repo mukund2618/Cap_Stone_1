@@ -24,7 +24,7 @@ pipeline {
                           docker run -d -p 555:80 mukund2618/cap_stone_1
                        '''  
                 }catch(error){
-                    echo "========connectionf failed========"
+                    echo "========connection failed========"
                 }
             }
         }
