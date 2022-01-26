@@ -14,7 +14,7 @@ pipeline {
          }
       }
     }
-    stage('Connecting to stage machine') {
+    stage('Pull docker image and deploy application in stage machine') {
       steps {
           sshagent(['Stage']) {
              script{
