@@ -20,9 +20,8 @@ pipeline {
              script{
                 try{
                     sh '''#!/bin/sh
-                          ssh ubuntu@34.219.164.48 docker pull mukund2618/cap_stone_1
-                          hostname
-                          docker run -d -p 5555:80 mukund2618/cap_stone_1
+                          ssh ubuntu@34.219.164.48 docker run -d -p 5555:80 mukund2618/cap_stone_1
+                          
                        '''  
                 }catch(error){
                     echo "========connection failed========"
