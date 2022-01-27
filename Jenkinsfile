@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Docker Build') {
       steps {
-         sh 'docker build -t mukund2618/cap_stone_1 .'
+         sh 'docker build -t mukund2618/cap_stone_1'
       }
     }
     stage('Docker Push') {
