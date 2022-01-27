@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Docker Build') {
       steps {
-         sh 'docker build -t mukund2618/cap_stone_1 .'
+         sh 'docker build -t mukund2618/cap_stone_1
       }
     }
     stage('Docker Push') {
@@ -21,7 +21,7 @@ pipeline {
                 try{
                     sh '''#!/bin/sh
                           ssh ubuntu@34.219.164.48 docker pull mukund2618/cap_stone_1
-                          docker run -d -P 5555:80 mukund2618/cap_stone_1
+                          docker run -d -p 5555:80 mukund2618/cap_stone_1
                        '''  
                 }catch(error){
                     echo "========connection failed========"
