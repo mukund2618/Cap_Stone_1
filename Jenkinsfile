@@ -14,22 +14,6 @@ pipeline {
          }
       }
     }
-    stage('Pull docker image and deploy application in stage machine') {
-      steps {
-          sshagent(['Stage']) {
-             script{
-                try{
-                    sh '''#!/bin/sh
-                          ssh ubuntu@34.219.164.48 docker run -d -p 5555:80 mukund2618/cap_stone_1
-                          
-                       '''  
-                }catch(error){
-                    echo "========connection failed========"
-                }
-            }
-        }
-      }
-    }
   }
 }
 
