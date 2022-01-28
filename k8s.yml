@@ -1,0 +1,11 @@
+---
+- hosts: servers
+  tasks:
+
+  - name: clone repo
+    git:
+      repo: 'https://github.com/mukund2618/Cap_Stone_1.git'
+      dest: /home/ubuntu/Ansible/
+
+  - name: start kubernetes deployment and service using yml file
+    shell: kubectl apply -f /home/ubuntu/Ansible/deploy.yml
