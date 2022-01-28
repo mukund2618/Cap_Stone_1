@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-webapp
+  name: my-webapp-deploy
 spec:
   selector:
     matchLabels:
@@ -10,10 +10,10 @@ spec:
   template:
     metadata:
       labels:
-        app: myweb-app
+        app: my-webapp
     spec:
       containers:
-      - name: my-webapp
+      - name: my-webapp-container
         image: mukund2618/cap_stone_1
         ports:
         - containerPort: 80
