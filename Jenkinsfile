@@ -16,7 +16,7 @@ pipeline {
     }
     stage('Deploy with playbook'){
       steps{
-        sh 'ansible-playbook deployment-playbook.yaml'
+        sh 'ansible-playbook ansible.yaml'
       }
     }  
   }
