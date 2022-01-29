@@ -14,7 +14,7 @@ pipeline {
          }
       }
     }
-    stage('Deploy with playbook'){
+    stage('My webapp Deployment with ansible playbook in Minikube Environment'){
       steps{
         sh 'ansible-playbook ansible.yml'
       }
