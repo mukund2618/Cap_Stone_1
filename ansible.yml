@@ -8,6 +8,6 @@
       dest: /home/ubuntu/Ansible/
       clone: yes
       update: yes
-
+      force: yes
   - name: start kubernetes deployment and service using yml file
     shell: kubectl apply -f /home/ubuntu/Ansible/k8s.yml
