@@ -16,8 +16,8 @@ pipeline {
     }
     stage('My webapp Deployment with ansible playbook in Minikube Environment'){
       steps{
-       ansiblePlaybook becomeUser: 'ubuntu', credentialsId: 'Stage', disableHostKeyChecking: true, installation: 'Ansible1', inventory: 'host.inv', playbook: 'ansible.yml' 
-      }
+       ansiblePlaybook becomeUser: 'ubuntu', credentialsId: 'Stage', disableHostKeyChecking: true, installation: 'Ansible1', inventory: 'host.inv', playbook: 'ansible.yml'
+       }
     }  
   }
 }
