@@ -1,13 +1,11 @@
 ---
 - hosts: servers
   tasks:
+   - name: copy yml files
+     copy: src=/home/ubuntu/Cap_Stone_1/{{ item }} dest=/home/ubuntu/Ansible/
+     with_items:
+     - ansible.yml
+     - k8s.yml
 
-  - name: clone repo
-    git:
-      repo: 'https://github.com/mukund2618/Cap_Stone_1.git'
-      dest: /home/ubuntu/Ansible/
-      clone: yes
-      update: yes
-      force: yes
-  - name: start kubernetes deployment and service using yml file
-    shell: kubectl apply -f /home/ubuntu/Ansible/k8s.yml
+   - name: start kubernetes deployment and service using yml file
+     shell: kubectl apply -f /home/ubuntu/Ansible/k8s.yml
