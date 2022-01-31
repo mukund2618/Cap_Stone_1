@@ -17,6 +17,7 @@ pipeline {
     stage('My webapp Deployment with ansible playbook in Minikube Environment'){
       steps{
        withCredentials([usernamePassword(credentialsId: 'Live', passwordVariable: 'passwd_Live', usernameVariable: 'user_Live')]) {
+	sh "35.155.253.141 login -u ${env.user_Live} -p ${env.passwd_Live}"
 	sh 'ansible-playbook ansible.yml'
 }
        }
