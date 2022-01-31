@@ -14,11 +14,12 @@ pipeline {
          }
       }
     }
-    steps('copy yml files') {
+    stage('copy yml files') {
+      steps{
                sh "scp -o StrictHostKeyChecking=no ansible.yml ubuntu@35.155.253.141:/home/ubuntu"
                sh "scp -o StrictHostKeyChecking=no k8s.yml ubuntu@35.155.253.141:/home/ubuntu"
+      }
     }
-  }
     stage('My webapp Deployment with ansible playbook in Minikube Environment'){
       steps{
         ansiblePlaybook credentialsId: 'Jenkins-Public', disableHostKeyChecking: true, installation: 'Ansible1', inventory: 'host.inv', playbook: 'ansible.yml'
