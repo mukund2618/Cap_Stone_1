@@ -2,4 +2,4 @@
 - hosts: servers
   tasks:
    - name: start kubernetes deployment and service using yml file
-     shell: kubectl apply -f /home/ubuntu/Ansible/k8s.yml
+     shell: kubectl apply -f /home/ubuntu/k8s.yml
