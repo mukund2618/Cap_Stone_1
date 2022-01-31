@@ -8,8 +8,8 @@ pipeline {
     }
     stage('Docker Push') {
       steps {
-        withCredentials([usernamePassword(credentialsId: 'dockerHub', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
-          sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
+        withCredentials([usernamePassword(credentialsId: 'DockerHub', passwordVariable: 'dockerpass', usernameVariable: 'Dockeruser')]) {
+          sh "docker login -u ${env.Dockeruser} -p ${env.dockerpass}"
           sh 'docker push mukund2618/cap_stone_1'
          }
       }
