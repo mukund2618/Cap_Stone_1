@@ -2,4 +2,4 @@
 - hosts: servers
   tasks:
    - name: start kubernetes deployment and service using yml file
-     shell: ssh ubuntu@172.31.26.54 kubectl apply -f /home/ubuntu/Cap_Stone_1
+     shell: kubectl apply -f /home/ubuntu/Cap_Stone_1/k8s.yml
