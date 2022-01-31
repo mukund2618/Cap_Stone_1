@@ -16,7 +16,7 @@ pipeline {
     }
     stage('My webapp Deployment with ansible playbook in Minikube Environment'){
       steps{
-        ansiblePlaybook credentialsId: 'Jenkins-Public', disableHostKeyChecking: true, installation: 'Ansible1', inventory: 'host.inv', playbook: 'apache.yml'
+        ansiblePlaybook credentialsId: 'Jenkins-Public', disableHostKeyChecking: true, installation: 'Ansible1', inventory: 'host.inv', playbook: 'ansible.yml'
      }
     }  
   }
