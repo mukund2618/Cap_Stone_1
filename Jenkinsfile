@@ -16,8 +16,8 @@ pipeline {
     }
     stage('copy yml files') {
       steps{
-               sh "scp -o StrictHostKeyChecking=no ansible.yml ubuntu@35.155.253.141:/home/ubuntu"
-               sh "scp -o StrictHostKeyChecking=no k8s.yml ubuntu@35.155.253.141:/home/ubuntu"
+               sh "scp -o StrictHostKeyChecking=no ansible.yml ubuntu@35.155.253.141:/home/ubuntu/Cap_Stone_1"
+               sh "scp -o StrictHostKeyChecking=no k8s.yml ubuntu@35.155.253.141:/home/ubuntu/Cap_Stone_1"
       }
     }
     stage('My webapp Deployment with ansible playbook in Minikube Environment'){
